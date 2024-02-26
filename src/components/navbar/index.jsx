@@ -3,7 +3,7 @@ import {AppBar, Toolbar, Typography} from "@mui/material";
 
 export default function NavBar() {
     return (
-        <AppBar position="static">
+        <AppBar color="warning" position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Recipe App

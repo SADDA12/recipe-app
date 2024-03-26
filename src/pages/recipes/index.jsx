@@ -1,4 +1,4 @@
-import { Card, CardMedia, Container, TextField, Grid, CardContent, Typography } from "@mui/material";
+import {Container, TextField, Grid} from "@mui/material";
 import RecipeItem from "../../components/recipe-item";
 import { useEffect, useState } from "react";
 import noRecipes from "../../assets/images/undraw_no_data_re_kwbl.svg";
@@ -13,7 +13,7 @@ export default function Recipes() {
     const searchRecipes = () => {
         setLoading(true);
         // prepare url
-        const url = new URL(`http://localhost:4000/recipes`);
+        const url = new URL(`${process.env.REACT_APP_RECIPE_API}/recipes`);
         url.searchParams.append('apiKey', process.env.REACT_APP_SPOONACULAR_API_KEY);
         url.searchParams.append('query', searchItem);
         // add the query parameter
